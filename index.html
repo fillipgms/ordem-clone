@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/vida.js" defer></script>
+    <script src="js/sanidade.js" defer></script>
+    <script src="js/ocultismo.js" defer></script>
+    <title>Ficha - Kaiser</title>
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+            <img src="imgs/ordoIcon.png" id="ordo">
+            <h3>Perfil de Investigador</h3>
+        </header>
+        <main id="main">
+            <section id="details">
+                <h2>Detalhes Pessoais</h2>
+                <div class="tag">
+                    <label for="nome">Nome</label> <br>
+                    <input type="text" name="nome" id="nome" value="Kaiser" disabled>
+                </div>
+                <div class="tag">
+                    <label for="jogador">Jogador</label> <br>
+                    <input type="text" name="jogador" id="jogador" value="Calango" disabled>
+                </div>
+                <div class="tag">
+                    <label for="ocupation">Ocupation</label> <br>
+                    <input type="text" name="ocupation" id="ocupation" value="Hacker / Combatente" disabled>
+                </div>
+                <div class="tag">
+                    <label for="idade">Idade</label> <br>
+                    <input type="text" name="idade" id="idade" value="30" disabled>
+                </div>
+                <div class="tag">
+                    <label for="gender">Gênero</label> <br>
+                    <input type="text" name="gender" id="gender" value="Masculino" disabled>
+                </div>
+                <div class="tag">
+                    <label for="local">Local de nascimento</label> <br>
+                    <input type="text" name="local" id="local" value="Manaus" disabled>
+                </div>
+                <div class="tag">
+                    <label for="residencia">Local de residência</label> <br>
+                    <input type="text" name="residencia" id="residencia" value="São Paulo" disabled>
+                </div>
+            </section>
+            <section id="profile">
+                <div id="icon">
+                    <img src="imgs/portraitKaiser.png" id="kaiser">
+                </div>
+                <div id="vida">
+                    <h3 class="titles">Vida</h3>
+                    <section class="bars">
+                        <button id="removeLife">-</button>
+                        <div id="vida-bar" class="barras">
+                            <h2><span id="vida-counter">51</span> / 51</h2>
+                            <div id="background-vida" class="barra background" style="--bg: #632121;">
+                                <div id="red-life" class="barra colors" style="--bg: #520002;"></div>
+                            </div>
+                        </div>
+                        <button id="addlife">+</button>
+                    </section>
+                    <section class="conditionals">
+                        <span>
+                            <input type="checkbox" name="lesao" id="lesao" class="checkbox">
+                            <label for="lesao">Lesão Grave</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="inconsiente" id="inconsiente" class="checkbox">
+                            <label for="inconsiente">Inconsiente</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="morrendo" id="morrendo" class="checkbox">
+                            <label for="morrendo">Morrendo</label>
+                        </span>
+                    </section>
+                </div>
+                <div id="sanidade">
+                    <h3 class="titles">Sanidade</h3>
+                    <section class="bars">
+                        <button id="removeSanity">-</button>
+                        <div id="sanidade-bar" class="barras">
+                            <h2><span id="sanidade-counter">50</span> / 50</h2>
+                            <div id="background-sanidade" class="barra background" style="--bg: #213363;">
+                                <div id="blue-sanidade" class="barra colors" style="--bg: #011550;"></div>
+                            </div>
+                        </div>
+                        <button id="addSanity">+</button>
+                    </section>
+                    <section class="conditionals">
+                        <span>
+                            <input type="checkbox" name="traumatizado" id="traumatizado" class="checkbox">
+                            <label for="traumatizado">traumatizado</label>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="enlouquecido" id="enlouquecido" class="checkbox">
+                            <label for="enlouquecido">enlouquecido</label>
+                        </span>
+                    </section>
+                </div>
+                <div id="ocultismo">
+                    <h3 class="titles">ocultismo</h3>
+                    <section class="bars">
+                        <button id="removeOcultism">-</button>
+                        <div id="ocultismo-bar" class="barras">
+                            <h2><span id="ocultismo-counter">25</span> / 25</h2>
+                            <div id="background-ocultismo" class="barra background" style="--bg: #3f2264;">
+                                <div id="purple-ocultismo" class="barra colors" style="--bg: #2f0153;"></div>
+                            </div>
+                        </div>
+                        <button id="addOculstism">+</button>
+                    </section>
+                </div>
+                <section id="info">
+                    <label for="dano">Dano Extra</label>
+                    <label for="dano">Cargo</label>
+                    <label for="exposicao">Exposição Paranormal</label>
+                    <input type="number" name="dano" id="danoExtra" value="0" min="0">
+                    <input type="number" name="cargo" id="cargo" value="0" min="0">
+                    <input type="number" name="exposicao" id="exposicao" value="50" min="0">
+                </section>
+            </section>
+            <section id="atributes">
+
+            </section>
+            <section id="pericias">
+                
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
