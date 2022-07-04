@@ -12,9 +12,13 @@
         href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4c0a49f720.js" crossorigin="anonymous"></script>
+    <link href="fontawesome/css/all.css" rel="stylesheet">
     <script src="js/vida.js" defer></script>
     <script src="js/sanidade.js" defer></script>
     <script src="js/ocultismo.js" defer></script>
+    <script src="js/atributos.js" defer></script>
+    <script src="js/general.js" defer></script>
     <title>Ficha - Kaiser</title>
 </head>
 
@@ -129,11 +133,65 @@
                     <label for="exposicao">Exposição Paranormal</label>
                     <input type="number" name="dano" id="danoExtra" value="0" min="0">
                     <input type="number" name="cargo" id="cargo" value="0" min="0">
-                    <input type="number" name="exposicao" id="exposicao" value="50" min="0">
+                    <input type="number" name="exposicao" id="exposicao" value="50" min="0" max="100">
                 </section>
             </section>
             <section id="atributes">
-
+                <header id="atributes-header">
+                    <span></span>
+                    <h2>Atributos</h2> 
+                    <button id="atributes-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                </header>
+                <main id="atributes-main">
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Aparencia</h3>
+                        <input type="number" value="11" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Constituição</h3>
+                        <input type="number" value="13" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Destreza</h3>
+                        <input type="number" value="15" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Educação</h3>
+                        <input type="number" value="12" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Força</h3>
+                        <input type="number" value="9" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Inteligência</h3>
+                        <input type="number" value="11" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Poder</h3>
+                        <input type="number" value="13" disabled>
+                    </div>
+                    <div class="atribute">
+                        <img src="imgs/d20.png" class="d20">
+                        <h3>Sorte</h3>
+                        <input type="number" value="6" disabled>
+                    </div>
+                    <div class="atribute mov">
+                        <h3>Movimento</h3>
+                        <input type="number" value="8" disabled>
+                    </div>
+                    <div class="atribute">
+                        <h3>Tamanho</h3>
+                        <input type="number" value="12" disabled>
+                    </div>
+                </main>
             </section>
             <section id="pericias">
                 
