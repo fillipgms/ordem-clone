@@ -136,65 +136,185 @@
                     <input type="number" name="exposicao" id="exposicao" value="50" min="0" max="100">
                 </section>
             </section>
-            <section id="atributes">
-                <header id="atributes-header">
+            <div class="div-container">
+                <section id="atributes">
+                    <header id="atributes-header" class="header">
+                        <span></span>
+                        <h2>Atributos</h2>
+                        <button id="atributes-open" class="open-close"><i
+                                class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    </header>
+                    <main id="atributes-main">
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Aparencia</h3>
+                            <input type="number" value="11" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Constituição</h3>
+                            <input type="number" value="13" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Destreza</h3>
+                            <input type="number" value="15" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Educação</h3>
+                            <input type="number" value="12" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Força</h3>
+                            <input type="number" value="9" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Inteligência</h3>
+                            <input type="number" value="11" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Poder</h3>
+                            <input type="number" value="13" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d20">
+                            <h3>Sorte</h3>
+                            <input type="number" value="6" disabled>
+                        </div>
+                        <div class="atribute mov">
+                            <img src="imgs/d20.png" class="d21">
+                            <h3>Movimento</h3>
+                            <input type="number" value="8" disabled>
+                        </div>
+                        <div class="atribute">
+                            <img src="imgs/d20.png" class="d21">
+                            <h3>Tamanho</h3>
+                            <input type="number" value="12" disabled>
+                        </div>
+                    </main>
+                </section>
+            </div>
+            <div class="div-container">
+                <section id="pericias-quick">
+                    <header id="pericias-quick-header" class="header">
+                        <span></span>
+                        <h2>Perícias <br> <span>Acesso Rápido</span></h2>
+                        <button id="pericias-quick-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    </header>
+                    <main id="pericias-quick-main">
+                        <span id="warning">Não há pericias no acesso rápido</span>
+                    </main>
+                 </section> 
+            </div>
+            <section id="combate">
+                <header id="combate-header" class="header">
                     <span></span>
-                    <h2>Atributos</h2> 
-                    <button id="atributes-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    <h2>combate</h2>
+                    <div>
+                        <button id="combate-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    </div>
                 </header>
-                <main id="atributes-main">
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Aparencia</h3>
-                        <input type="number" value="11" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Constituição</h3>
-                        <input type="number" value="13" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Destreza</h3>
-                        <input type="number" value="15" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Educação</h3>
-                        <input type="number" value="12" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Força</h3>
-                        <input type="number" value="9" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Inteligência</h3>
-                        <input type="number" value="11" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Poder</h3>
-                        <input type="number" value="13" disabled>
-                    </div>
-                    <div class="atribute">
-                        <img src="imgs/d20.png" class="d20">
-                        <h3>Sorte</h3>
-                        <input type="number" value="6" disabled>
-                    </div>
-                    <div class="atribute mov">
-                        <h3>Movimento</h3>
-                        <input type="number" value="8" disabled>
-                    </div>
-                    <div class="atribute">
-                        <h3>Tamanho</h3>
-                        <input type="number" value="12" disabled>
-                    </div>
-                </main>
             </section>
             <section id="pericias">
-                
+                <header id="pericias-header" class="header">
+                    <span></span>
+                    <h2>Perícias</h2>
+                    <button id="pericias-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                </header>
+                <main id="pericias-main">
+                    <div class="pericia">
+                        <h3>Atletismo</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Atualidades</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Ciência</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Diplomacia</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Enganação</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Fortitude</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Furtividade</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Intimidação</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Investigação</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Luta</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Medicina</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Ocultismo</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Percepção</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Pilotagem</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Pontaria</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Prestidigitação</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Profissão</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Reflexos</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Religião</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Tática</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia mov">
+                        <h3>Tecnologia</h3>
+                        <input type="number" disabled>
+                    </div>
+                    <div class="pericia">
+                        <h3>Vontade</h3>
+                        <input type="number" disabled>
+                    </div>
+                </main>
             </section>
         </main>
     </div>

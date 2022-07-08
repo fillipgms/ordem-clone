@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -98,11 +99,17 @@ input[type='number']::-webkit-outer-spin-button {
 
     button {
         padding: 5px 50px;
-        border: none;
-        background-color: #A68053;
+        border: 1px #f1f1f1 solid;
+        background-color: unset;
         cursor: pointer;
+        color: #f1f1f1;
         border-radius: 5px;
         font-size: 19px;
+        transition: background ease .3s;
+
+        &:hover {
+            background-color: #505050;
+        }
     }
 }
 
@@ -175,13 +182,34 @@ input[type='number']::-webkit-outer-spin-button {
     }
 }
 
-#atributes {
+#atributes, #pericias-quick {
     border: 1px solid #505050;
     border-radius: 10px;
     padding: 30px;
 }
 
-#atributes-header {
+#atributes.closed {
+    height: unset !important;
+}
+
+#pericias-quick-header {
+    text-align: center;
+
+    h2 {
+        span {
+            font-weight: lighter;
+            font-size: 1rem;
+        }
+    }
+}
+
+#pericias-quick-main {
+    span {
+        text-align: center;
+    }
+}
+
+.header {
     display: flex;
     width: 90%;
     justify-content: space-between;
@@ -198,23 +226,27 @@ input[type='number']::-webkit-outer-spin-button {
         cursor: pointer;
     }
 }
-#atributes-main {
+#atributes-main, #pericias-main {
     display: grid;
     gap: 1.2em;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
-#atributes-main.notActive {
-    display: none;
+#atributes-main {
+    height: 100%;
+    justify-items: center;
 }
 
-.atribute {
+.notActive {
+    display: none !important;
+}
+
+.atribute, .pericia {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
 
     h3 {
@@ -235,6 +267,14 @@ input[type='number']::-webkit-outer-spin-button {
     }
 }
 
+.arrow-icon {
+    transition: ease .3s;
+}
+
+.arrow-icon.closed {
+    transform: rotate(180deg);
+}
+
 .mov {
     grid-column: 2;
 }
@@ -242,6 +282,29 @@ input[type='number']::-webkit-outer-spin-button {
 .d20 {
     max-width: 30%;
     filter: invert(100%);
+}
+
+.d21 {
+    max-width: 30%;
+    filter: invert(100%) opacity(30%);
+}
+
+.morto {
+    filter: grayscale(100%);
+}
+
+#pericias {
+    border: 1px solid #505050;
+    border-radius: 10px;
+    padding: 30px;
+    grid-column: span 2;
+}
+
+#combate {
+    border: 1px solid #505050;
+    border-radius: 10px;
+    padding: 30px;
+    grid-column: span 2;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -117,11 +119,18 @@ input[type='number']::-webkit-outer-spin-button {
 
 .bars button {
   padding: 5px 50px;
-  border: none;
-  background-color: #A68053;
+  border: 1px #f1f1f1 solid;
+  background-color: unset;
   cursor: pointer;
+  color: #f1f1f1;
   border-radius: 5px;
   font-size: 19px;
+  -webkit-transition: background ease .3s;
+  transition: background ease .3s;
+}
+
+.bars button:hover {
+  background-color: #505050;
 }
 
 .barras {
@@ -201,13 +210,30 @@ input[type='number']::-webkit-outer-spin-button {
   font-size: 25px;
 }
 
-#atributes {
+#atributes, #pericias-quick {
   border: 1px solid #505050;
   border-radius: 10px;
   padding: 30px;
 }
 
-#atributes-header {
+#atributes.closed {
+  height: unset !important;
+}
+
+#pericias-quick-header {
+  text-align: center;
+}
+
+#pericias-quick-header h2 span {
+  font-weight: lighter;
+  font-size: 1rem;
+}
+
+#pericias-quick-main span {
+  text-align: center;
+}
+
+.header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,7 +249,7 @@ input[type='number']::-webkit-outer-spin-button {
   padding-bottom: 10px;
 }
 
-#atributes-header button {
+.header button {
   background-color: unset;
   color: #f1f1f1;
   padding: 7px 9px;
@@ -231,20 +257,25 @@ input[type='number']::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-#atributes-main {
+#atributes-main, #pericias-main {
   display: -ms-grid;
   display: grid;
   gap: 1.2em;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-#atributes-main.notActive {
-  display: none;
+#atributes-main {
+  height: 100%;
+  justify-items: center;
 }
 
-.atribute {
+.notActive {
+  display: none !important;
+}
+
+.atribute, .pericia {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -256,19 +287,16 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   text-align: center;
 }
 
-.atribute h3 {
+.atribute h3, .pericia h3 {
   font-size: 1em;
   font-weight: 400;
   margin-top: 10px;
 }
 
-.atribute input {
+.atribute input, .pericia input {
   width: 100%;
   background-color: unset;
   border: none;
@@ -277,6 +305,16 @@ input[type='number']::-webkit-outer-spin-button {
   text-align: center;
   font-size: 25px;
   margin-top: 10px;
+}
+
+.arrow-icon {
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.arrow-icon.closed {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .mov {
@@ -288,6 +326,31 @@ input[type='number']::-webkit-outer-spin-button {
   max-width: 30%;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+.d21 {
+  max-width: 30%;
+  -webkit-filter: invert(100%) opacity(30%);
+          filter: invert(100%) opacity(30%);
+}
+
+.morto {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#pericias {
+  border: 1px solid #505050;
+  border-radius: 10px;
+  padding: 30px;
+  grid-column: span 2;
+}
+
+#combate {
+  border: 1px solid #505050;
+  border-radius: 10px;
+  padding: 30px;
+  grid-column: span 2;
 }
 
 @media screen and (max-width: 600px) {
