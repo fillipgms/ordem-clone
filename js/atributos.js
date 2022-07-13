@@ -1,5 +1,6 @@
 const atributesBtn = document.getElementById("atributes-open")
 const periciasBtn = document.getElementById("pericias-open")
+const periciasAcessBtn = document.getElementById("pericias-quick-open")
 
 periciasBtn.addEventListener("click", () => {
     let main = document.getElementById("pericias-main")
@@ -12,5 +13,11 @@ atributesBtn.addEventListener("click", () => {
     let atributes = document.getElementById("atributes")
 
     atributes.classList.toggle("closed")
+    main.classList.toggle("notActive")
+})
+
+periciasAcessBtn.addEventListener("click", () => {
+    let main = document.getElementById("pericias-quick-main")
+
     main.classList.toggle("notActive")
 })

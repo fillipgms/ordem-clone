@@ -1,17 +1,39 @@
-const button = document.querySelectorAll(".open-close")
-const icon = document.querySelectorAll(".arrow-icon")
-const morrendo = document.getElementById("morrendo")
+let buttons = document.querySelectorAll('.open-close');
 
-morrendo.addEventListener("click", () => {
-    let kaiser = document.getElementById("kaiser")
-    kaiser.classList.toggle("morto")
-})
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        button.children[0].classList.toggle("closed")
+    });
+});
 
+const PericiasMain = document.getElementById("pericias-quick-main")
+var empty = true
+const checkbox = document.querySelectorAll(".pericia-checkbox")
+const warning = document.getElementById("warning")
 
-for (let i = 0; i < button.length; i++) {
-    button[i].addEventListener('click', () => {
-        for (let i = 0; i < button.length; i++) {
-            icon[i].classList.toggle("closed")
+checkbox.forEach(box => {
+    let container = box.nextElementSibling
+    container.classList.add("content")
+    let clone = container.cloneNode(true)
+
+    box.addEventListener('click', () => {
+        if (box.checked) {
+            empty = false
+            PericiasMain.appendChild(clone)
+        } else {
+            PericiasMain.removeChild(clone)
+
+            if (PericiasMain.children.length <= 1) {
+                empty = true
+            }
+        }
+
+        if (empty != true) {
+            PericiasMain.classList.add("grid")
+            warning.style.display = "none"
+        } else {
+            PericiasMain.classList.remove("grid")
+            warning.style.display = "block"
         }
     });
-}
+});

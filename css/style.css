@@ -222,6 +222,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 #pericias-quick-header {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #pericias-quick-header h2 span {
@@ -229,8 +230,22 @@ input[type='number']::-webkit-outer-spin-button {
   font-size: 1rem;
 }
 
-#pericias-quick-main span {
+#pericias-quick-main {
   text-align: center;
+}
+
+#pericias-quick-main.grid {
+  -ms-grid-columns: (minmax(calc(100%/4), 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(calc(100%/4), 1fr));
+  gap: 1.2em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -ms-grid;
+  display: grid;
+}
+
+#pericias-quick-main.grid ~ #pericias-quick-header {
+  margin-bottom: 0px !important;
 }
 
 .header {
@@ -264,6 +279,18 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   margin-top: 40px;
+}
+
+#pericias-main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#pericias-main section input[type=checkbox] {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 #atributes-main {
@@ -308,8 +335,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .arrow-icon {
-  -webkit-transition: ease .3s;
-  transition: ease .3s;
+  -webkit-transition: ease .2s;
+  transition: ease .2s;
 }
 
 .arrow-icon.closed {
