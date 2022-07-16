@@ -8,8 +8,22 @@ buttons.forEach(button => {
 
 const PericiasMain = document.getElementById("pericias-quick-main")
 var empty = true
+const periciasEdit = document.getElementById("pericias-edit")
 const checkbox = document.querySelectorAll(".pericia-checkbox")
 const warning = document.getElementById("warning")
+
+periciasEdit.addEventListener("click", () => {
+    let nodes = document.getElementById("pericias-main").getElementsByTagName('*');
+    if (nodes[0].disabled == true) {
+        for(let i = 0; i < nodes.length; i++){
+            nodes[i].disabled = false;
+        }
+    } else {
+        for(let i = 0; i < nodes.length; i++){
+            nodes[i].disabled = true;
+        }
+    }
+})
 
 checkbox.forEach(box => {
     let container = box.nextElementSibling

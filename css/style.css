@@ -102,7 +102,7 @@ input[type='number']::-webkit-outer-spin-button {
   background-position: center;
   background-color: #09080D;
   width: 25%;
-  border-radius: 100px;
+  border-radius: 50%;
   border: 1px #f1f1f1 solid;
   margin: 0 auto;
   -webkit-box-shadow: #a681538e 0px 5px 15px;
@@ -238,8 +238,7 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-grid-columns: (minmax(calc(100%/4), 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(calc(100%/4), 1fr));
   gap: 1.2em;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  place-items: center;
   display: -ms-grid;
   display: grid;
 }
@@ -371,6 +370,8 @@ input[type='number']::-webkit-outer-spin-button {
   border-radius: 10px;
   padding: 30px;
   grid-column: span 2;
+  height: 90%;
+  overflow-y: scroll;
 }
 
 #combate {
@@ -378,6 +379,72 @@ input[type='number']::-webkit-outer-spin-button {
   border-radius: 10px;
   padding: 30px;
   grid-column: span 2;
+}
+
+#combate-main {
+  max-height: 20em;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 5px 1rem;
+  margin: 20px auto 0;
+  width: 90%;
+}
+
+table button {
+  background-color: unset;
+  color: #f1f1f1;
+  padding: 7px 9px;
+  border: 1px #f1f1f1 solid;
+  cursor: pointer;
+}
+
+#table-header {
+  border-bottom: 2px solid #f1f1f1;
+}
+
+td {
+  text-align: left;
+}
+
+td input, td select {
+  width: 100%;
+  background-color: unset;
+  color: #f1f1f1;
+  border: none;
+  padding-bottom: 0;
+  outline: none;
+  padding: 7px 9px;
+  border-bottom: 1px solid #f1f1f1;
+  border-right: 1px solid #505050;
+}
+
+td input:focus, td select:focus {
+  border-bottom: 2px solid #f1f1f1;
+}
+
+td select option {
+  color: #000;
+}
+
+.rows {
+  border-bottom: 1px solid #505050;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputs {
+  display: none;
+}
+
+.inputs.active {
+  display: table-row;
 }
 
 @media screen and (max-width: 600px) {

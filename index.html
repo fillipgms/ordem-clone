@@ -17,8 +17,9 @@
     <script src="js/vida.js" defer></script>
     <script src="js/sanidade.js" defer></script>
     <script src="js/ocultismo.js" defer></script>
-    <script src="js/atributos.js" defer></script>
+    <script src="js/openclose.js" defer></script>
     <script src="js/general.js" defer></script>
+    <script src="js/combate.js" defer></script>
     <title>Ficha - Kaiser</title>
 </head>
 
@@ -215,15 +216,59 @@
                     <span></span>
                     <h2>combate</h2>
                     <div>
+                        <button id="addData"><i class="fa-solid fa-plus"></i></button>
                         <button id="combate-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
                     </div>
                 </header>
+                <main id="combate-main">
+                    <table id="table">
+                        <thead>
+                            <tr id="table-header">
+                                <th>Nome</th>
+                                <th>Tipo</th>
+                                <th>Dano</th>
+                                <th>Mum. Atual</th>
+                                <th>Mum. máximo</th>
+                                <th>Ataque</th>
+                                <th>Alcance</th>
+                                <th>Defeito</th>
+                                <th>Área</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody id="tableData">
+                            <tr id="inputs" class="inputs">
+                                <td class="name">
+                                    <button id="send" onclick="addRow()"><i class="fa-solid fa-check"></i></button>
+                                    <input type="text" class="input01" id="nomeInput">
+                                </td>
+                                <td><select name="tipo" id="tipoInput" class="input01">
+                                    <option value="Briga">Briga</option>
+                                    <option value="Briga">Arcos</option>
+                                    <option value="Briga">Arma de fogo</option>
+                                    <option value="Briga">Rifle de precião</option>
+                                    <option value="Briga">Espingarda</option>
+                                </select></td>
+                                <td><input type="text" class="input01" id="danoInput"></td>
+                                <td><input type="number" class="input01" id="munMinInput"></td>
+                                <td><input type="number" class="input01" id="munMaxInput"></td>
+                                <td><input type="number" class="input01" id="ataqueInput"></td>
+                                <td><input type="number" class="input01" id="alcanceInput"></td>
+                                <td><input type="number" class="input01" id="defeitosInput"></td>
+                                <td><input type="number" class="input01" id="AreaInput"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </main>
             </section>
             <section id="pericias">
                 <header id="pericias-header" class="header">
                     <span></span>
                     <h2>Perícias</h2>
-                    <button id="pericias-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    <div>
+                        <button id="pericias-edit"><i class="fa-solid fa-pencil"></i></button>
+                        <button id="pericias-open" class="open-close"><i class="fa-solid fa-angle-down arrow-icon"></i></button>
+                    </div>
                 </header>
                 <main id="pericias-main">
                     <section>
