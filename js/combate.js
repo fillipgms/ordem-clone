@@ -1,6 +1,6 @@
 const table = document.getElementById("tableData")
 const addRowbtn = document.getElementById("addData")
-var counter = 1;
+var counter = 0;
 let nomeInput = document.getElementById("nomeInput")
 
 addRowbtn.addEventListener("click", () => {
