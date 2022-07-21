@@ -10,7 +10,8 @@ addRowbtn.addEventListener("click", () => {
 
 function addRow() {
     let nome = document.getElementById("nomeInput").value
-    let tipo = document.getElementById("tipoInput").value
+    let tipo = document.getElementById("tipoInput");
+    let option = tipo.options[tipo.selectedIndex].text;
     let dano = document.getElementById("danoInput").value
     let munMin = document.getElementById("munMinInput").value
     let munMax = document.getElementById("munMaxInput").value
@@ -27,7 +28,7 @@ function addRow() {
                     <button id="${counter}" onclick= "removeRow(this)"><i class="fa-solid fa-trash"></i></button>
                     ${nome}
                 </td>
-                <td>${tipo}</td>
+                <td>${option}</td>
                 <td>${dano}</td>
                 <td>${munMin}</td>
                 <td>${munMax}</td>
